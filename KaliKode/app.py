@@ -3,7 +3,7 @@ from models import db, Editor, Riddle, Avaliacao, criptografar_senha
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-# Inicializa banco de dados SQLite
+# bd em sqllite
 DATABASE_URL = 'sqlite:///riddles.db'
 engine = create_engine(DATABASE_URL)
 db.metadata.create_all(engine)
@@ -71,7 +71,7 @@ if __name__ == '__main__':
         if opcao == '1':
             usuario = login()
             if usuario:
-                # Aqui vamos depois mostrar o menu principal do sistema
+                # ainda não feito, preciso fazer o menu principal
                 input("Pressione Enter para continuar...")
         elif opcao == '2':
             criar_usuario()
